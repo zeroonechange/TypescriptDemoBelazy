@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>
+		Hi, there.
+	</title>
+	<link rel="stylesheet" type="text/css" href="css/spectre.css" />
+</head>
+
+<script>
+
+	function losec() {
+		alert('lose focus');
+	}
+
+</script>
+
+<body>
+
+	<div style="float:right; margin: 5px 5px 5px 5px;">
+
+		<span class="label label-error">内部因素 X7 </span>
+
+		<button class="btn btn-success" onclick="javascript:losec();">生成最终表格</button>
+
+	</div>
+
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>bug编号</th>
+				<th>bug类型</th>
+				<th>bug描述</th>
+				<th>bug原因</th>
+				<th>解决方案</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr>
+				<td>
+					<span class="label"><a href='http://www.baidu.com' target="_blank">123123</a></span>
+				</td>
+				<td>
+					<span class="label">内部因素</span>
+				</td>
+				<td><input onBlur="javascript:losec();" class="form-input" type="text" placeholder="bug描述" value="这是衣蛾测试" /></td>
+				<td><input class="form-input" type="text" placeholder="bug原因" value="不好用" /></td>
+				<td><input class="form-input" type="text" placeholder="解决方案" value="不解决了" /></td>
+			</tr>
+
+		</tbody>
+	</table>
+
+</body>
+
+</html>

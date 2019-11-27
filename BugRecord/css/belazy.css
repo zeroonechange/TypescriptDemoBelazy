@@ -1,0 +1,13 @@
+.belazyLogo{
+	background-color:#F7F7F7;
+	display:inline-block;
+    *display:inline;
+    *zoom:1;
+	border-radius:5px;
+	padding:3px;
+	align:center;
+}
+.belazyimg {
+	height: 24px;
+	width: 24px;
+}

@@ -1,0 +1,58 @@
+{
+  "manifest_version": 2,
+  "name": "beLazy",
+  "description": "a lazy tool for record bugsssss",
+  "icons": {
+    "16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
+  },
+  "version": "1.0",
+  "web_accessible_resources": [
+    "icon.png",
+    "image/record.png",
+    "image/solve.png",
+    "image/type.png",
+    "image/why.png",
+    "js/inject.js"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "ftp://*/*",
+        "file://*/*"
+      ],
+      "css": [
+        "css/belazy.css"
+      ],
+      "js": [
+        "js/vendor.js",
+        "js/content_script.js",
+        "js/inject.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "tabs",
+    "webRequest",
+    "<all_urls>",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
